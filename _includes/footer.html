@@ -1,21 +1,27 @@
+{% if page.lang %}
+  {% assign t = site.data.translations[page.lang] %}
+{% else %}
+  {% assign t = site.data.translations[site.default_lang] %}
+{% endif %}
+
 <footer class="site-footer">
   <div class="footer-container">
     <nav class="footer-links" aria-label="Rechtliche Links">
-      <a href="https://uni-freiburg.de/datenschutzerklaerung/" target="_blank" rel="noopener">Datenschutzerklärung</a>
+      <a href="https://uni-freiburg.de/datenschutzerklaerung/" target="_blank" rel="noopener">{{ t.footer_privacy }}</a>
       <span class="separator">|</span>
-      <a href="https://uni-freiburg.de/cognition/Impressum" target="_blank" rel="noopener">Impressum</a>
+      <a href="https://uni-freiburg.de/cognition/Impressum" target="_blank" rel="noopener">{{ t.footer_imprint }}</a>
       <span class="separator">|</span>
-      <a href="https://uni-freiburg.de/barrierefreiheit/" target="_blank" rel="noopener">Barrierefreiheit</a>
+      <a href="https://uni-freiburg.de/barrierefreiheit/" target="_blank" rel="noopener">{{ t.footer_accessibility }}</a>
     </nav>
   </div>
   
   <div class="footer-bottom">
     <p>
-      &copy; {{ 'now' | date: "%Y" }} Universität Freiburg | 
-      Studiengang Kognitionswissenschaft endet 2029
+      &copy; {{ 'now' | date: "%Y" }} {{ t.footer_copyright }} | 
+      {{ t.footer_program_end }}
     </p>
     <p class="footer-note">
-      Diese Seite dient als digitales Archiv und Erinnerung an den Studiengang.
+      {{ t.footer_note }}
     </p>
   </div>
 </footer>

@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Startseite
-lang: de
+title: Home
+lang: en
+permalink: /en/
 ---
 
 {% assign t = site.data.translations[page.lang] %}
@@ -50,7 +51,7 @@ lang: de
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
                   <path d="M4 1v1H2v12h12V2h-2V1h-2v1H6V1H4zm8 4H4v8h8V5z"/>
                 </svg>
-                {{ story.publication_date | date: "%d.%m.%Y" }}
+                {{ story.publication_date | date: "%m/%d/%Y" }}
               </span>
             </div>
           </header>
@@ -71,7 +72,7 @@ lang: de
       {% if sorted_stories.size > 20 %}
       <div class="pagination-info">
         <p>{{ t.voices_showing }} {{ sorted_stories.size }} {{ t.voices_count_plural }}</p>
-        <p class="note">Weitere {{ t.voices_count_plural }} werden in einer zukünftigen Version angezeigt.</p>
+        <p class="note">More {{ t.voices_count_plural }} will be displayed in a future version.</p>
       </div>
       {% endif %}
       
@@ -83,7 +84,7 @@ lang: de
         </svg>
         <h3>{{ t.no_voices_title }}</h3>
         <p>{{ t.no_voices_text }}</p>
-        <a href="{{ '/submit.html' | relative_url }}" class="btn btn-primary">
+        <a href="{{ '/en/submit.html' | relative_url }}" class="btn btn-primary">
           {{ t.submit_first }}
         </a>
       </div>
@@ -98,7 +99,7 @@ lang: de
       <p>
         {{ t.cta_text }}
       </p>
-      <a href="{{ '/submit.html' | relative_url }}" class="btn btn-primary btn-large">
+      <a href="{{ '/en/submit.html' | relative_url }}" class="btn btn-primary btn-large">
         {{ t.cta_button }}
       </a>
     </div>

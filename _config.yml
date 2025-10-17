@@ -4,6 +4,11 @@ description: "Erinnerungen und Erfolgsgeschichten ehemaliger Studierender des St
 baseurl: "/condolences" # Repository name for GitHub Pages
 url: "https://kogwissFR.github.io" # Your GitHub Pages URL
 
+# Multi-language support
+languages: ["de", "en"]
+default_lang: "de"
+exclude_from_localization: ["assets", "scripts"]
+
 # Build settings
 markdown: kramdown
 permalink: pretty

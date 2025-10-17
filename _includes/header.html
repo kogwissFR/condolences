@@ -8,14 +8,21 @@
              class="uni-logo">
       </a>
       <div class="site-title">
-        <h1><a href="{{ '/' | relative_url }}">Kognitionswissenschaft</a></h1>
-        <p class="subtitle">Erinnerungen & Erfolgsgeschichten</p>
+        {% if page.lang %}
+          {% assign t = site.data.translations[page.lang] %}
+        {% else %}
+          {% assign t = site.data.translations[site.default_lang] %}
+        {% endif %}
+        <h1><a href="{{ '/' | relative_url }}">{{ t.site_title }}</a></h1>
+        <p class="subtitle">{{ t.subtitle }}</p>
       </div>
     </div>
     
-    <!-- University Freiburg Main Logo -->
-    <div class="uni-main-logo">
-      <a href="https://uni-freiburg.de/" target="_blank" rel="noopener">
+    <div class="header-right">
+      {% include language-switcher.html %}
+      
+      <!-- University Freiburg Main Logo -->
+      <a href="https://uni-freiburg.de/" target="_blank" rel="noopener" class="uni-logo-main-link">
         <img src="https://cd.uni-freiburg.de/wp-content/uploads/2022/09/ufr-logo-white-2.png" 
              alt="Universität Freiburg" 
              class="uni-logo-main">

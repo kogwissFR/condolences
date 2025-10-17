@@ -1,0 +1,15 @@
+<div class="language-switcher">
+  {% if page.lang %}
+    {% assign current_lang = page.lang %}
+  {% else %}
+    {% assign current_lang = site.default_lang %}
+  {% endif %}
+  
+  {% if current_lang == 'de' %}
+    <a href="{{ '/en/' | relative_url }}" class="lang-link" hreflang="en">EN</a>
+    <span class="lang-active">DE</span>
+  {% else %}
+    <span class="lang-active">EN</span>
+    <a href="{{ '/' | relative_url }}" class="lang-link" hreflang="de">DE</a>
+  {% endif %}
+</div>
