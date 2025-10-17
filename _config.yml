@@ -1,8 +1,8 @@
 # Site settings
 title: "Kognitionswissenschaft Freiburg - Erinnerungen"
 description: "Erinnerungen und Erfolgsgeschichten ehemaliger Studierender des Studiengangs Kognitionswissenschaft"
-baseurl: "" # Leave empty if using custom domain, or "/repo-name" for GitHub Pages
-url: "https://YOUR_USERNAME.github.io" # Your GitHub Pages URL
+baseurl: "/condolences" # Repository name for GitHub Pages
+url: "https://kogwissFR.github.io" # Your GitHub Pages URL
 
 # Build settings
 markdown: kramdown
