@@ -1,0 +1,36 @@
+# Site settings
+title: "Kognitionswissenschaft Freiburg - Erinnerungen"
+description: "Erinnerungen und Erfolgsgeschichten ehemaliger Studierender des Studiengangs Kognitionswissenschaft"
+baseurl: "" # Leave empty if using custom domain, or "/repo-name" for GitHub Pages
+url: "https://YOUR_USERNAME.github.io" # Your GitHub Pages URL
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Exclude from build
+exclude:
+  - README.md
+  - DATA.md
+  - REQUIREMENTS.md
+  - INSTRUCTIONS.md
+  - knowledge/
+  - data/
+  - scripts/validate_data.py
+  - scripts/requirements.txt
+  - .DS_Store
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Site metadata
+author: "Universität Freiburg - Abteilung Kognitionswissenschaft"
+lang: de

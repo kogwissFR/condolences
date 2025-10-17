@@ -1,0 +1,27 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.DS_Store
+*.swp
+*.swo
+*~
+Gemfile.lock
+node_modules/
+vendor/
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.env
+
+# Sensitive data
+google-credentials.json
+credentials.json
