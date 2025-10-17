@@ -7,30 +7,20 @@ title: Startseite
   <div class="container">
     <h1>Erinnerungen an die Kognitionswissenschaft</h1>
     <p class="lead">
-      Der Studiengang Kognitionswissenschaft wird in den kommenden Jahren abgewickelt 
-      und endet 2029. Auf dieser Seite sammeln wir Erinnerungen und Erfolgsgeschichten 
-      ehemaliger Studierender, um die Geschichte dieses einzigartigen Studiengangs zu bewahren.
+      Der Studiengang endet 2029. Hier sammeln wir Erinnerungen und Erfolgsgeschichten ehemaliger Studierender.
     </p>
-    <div class="hero-actions">
-      <a href="{{ '/submit.html' | relative_url }}" class="btn btn-primary btn-large">
-        Geschichte einreichen
-      </a>
-      <a href="{{ '/about.html' | relative_url }}" class="btn btn-secondary btn-large">
-        Mehr erfahren
-      </a>
-    </div>
   </div>
 </section>
 
 <section class="stories-section">
   <div class="container">
-    <h2>Geschichten unserer Alumni</h2>
+    <h2>Stimmen unserer Alumni</h2>
     
     {% if site.data.stories and site.data.stories.size > 0 %}
       {% assign sorted_stories = site.data.stories | sort: 'publication_date' | reverse %}
       
       <div class="stories-count">
-        <p>{{ sorted_stories.size }} {% if sorted_stories.size == 1 %}Geschichte{% else %}Geschichten{% endif %} gesammelt</p>
+        <p>{{ sorted_stories.size }} {% if sorted_stories.size == 1 %}Stimme{% else %}Stimmen{% endif %} gesammelt</p>
       </div>
       
       <div class="stories-grid">
@@ -77,8 +67,8 @@ title: Startseite
       
       {% if sorted_stories.size > 20 %}
       <div class="pagination-info">
-        <p>Zeige die ersten 20 von {{ sorted_stories.size }} Geschichten</p>
-        <p class="note">Weitere Geschichten werden in einer zukünftigen Version angezeigt.</p>
+        <p>Zeige die ersten 20 von {{ sorted_stories.size }} Stimmen</p>
+        <p class="note">Weitere Stimmen werden in einer zukünftigen Version angezeigt.</p>
       </div>
       {% endif %}
       
@@ -88,10 +78,10 @@ title: Startseite
           <rect x="8" y="8" width="48" height="48" rx="4"/>
           <path d="M8 20h48M20 8v48"/>
         </svg>
-        <h3>Noch keine Geschichten eingereicht</h3>
+        <h3>Noch keine Stimmen eingereicht</h3>
         <p>Seien Sie der Erste, der eine Erinnerung oder Erfolgsgeschichte teilt!</p>
         <a href="{{ '/submit.html' | relative_url }}" class="btn btn-primary">
-          Erste Geschichte einreichen
+          Erste Stimme einreichen
         </a>
       </div>
     {% endif %}
