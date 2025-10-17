@@ -10,19 +10,21 @@
     <p class="lead">
       {{ t.hero_lead }}
     </p>
+    
+    {% if site.data.stories and site.data.stories.size > 0 %}
+      {% assign sorted_stories = site.data.stories | sort: 'publication_date' | reverse %}
+      <div class="stories-count">
+        <p>{{ sorted_stories.size }} {% if sorted_stories.size == 1 %}{{ t.voices_count_singular }}{% else %}{{ t.voices_count_plural }}{% endif %} {{ t.voices_collected }}</p>
+      </div>
+    {% endif %}
   </div>
 </section>
 
 <section class="stories-section">
   <div class="container">
-    <h2>{{ t.voices_title }}</h2>
     
     {% if site.data.stories and site.data.stories.size > 0 %}
       {% assign sorted_stories = site.data.stories | sort: 'publication_date' | reverse %}
-      
-      <div class="stories-count">
-        <p>{{ sorted_stories.size }} {% if sorted_stories.size == 1 %}{{ t.voices_count_singular }}{% else %}{{ t.voices_count_plural }}{% endif %} {{ t.voices_collected }}</p>
-      </div>
       
       <div class="stories-grid">
         {% for story in sorted_stories limit:20 %}
